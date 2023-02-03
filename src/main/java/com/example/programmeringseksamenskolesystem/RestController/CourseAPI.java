@@ -44,7 +44,7 @@ public class CourseAPI {
 
     @PostMapping("/api/course/add-student-to-course")
     public void addStudentsToCourse(@RequestBody CoursesAndStudents object) {
-        System.out.println("/api/course/add-student-to-course endpoint reached");
+        System.out.println("/api/course/add-student-to-course endpoint reached ");
         Optional<Student> containerObject = studentService.findById(object.getStudentID());
         Student studentObject = containerObject.orElse(new Student());
 
